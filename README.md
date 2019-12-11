@@ -4,9 +4,9 @@ Installation, Creation of Users on Servers, Commands etc.
 
 # INSTALLING ANSIBLE (MASTER):
 
-1> Choose Linux AMI - 3 Instances
-2> Enable ICMP All Traffic and SSH in Security Group - 1 Security Group
-3> Install Ansible on AWSLinux
+1) Choose Linux AMI - 3 Instances
+2) Enable ICMP All Traffic and SSH in Security Group - 1 Security Group
+3) Install Ansible on AWSLinux
 
 # Installation Commands:
 

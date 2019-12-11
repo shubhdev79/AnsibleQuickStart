@@ -25,15 +25,18 @@ Installation, Creation of Users on Servers, Commands etc.
 1) useradd -d /home/ansadm -m ansadm ***********
 2) passwd ansadm **************  [Not Mandatory]
 -------------------------------------------------
-**CONTROLLER: 172.31.XX.XX** [Master]
+**CONTROLLER: 172.31.XX.XX** 
+[Master]
 Username : ec2-user
 Pwd : Ansible@79
 
-**HOSTS: 172.31.XX.XXX**  [WebServer]
+**HOSTS: 172.31.XX.XXX**  
+[WebServer]
 Username : ec2-user
 Pwd : Ans****79
 
-**172.31.XX.XX [AppServer]**
+**172.31.XX.XX**
+[AppServer]
 Username : ec2-user
 Pwd : Ans****79
 
@@ -64,13 +67,13 @@ Pwd : Ans****79
 1) ansible localhost -m ping
 2) ansible **WebServer** -m ping
 3) ansible all -m ping
-**ansible all -m ping -k (-K is for Password Prompt)** 
+4) **ansible all -m ping -k (-K is for Password Prompt)** 
 [Useful in Case, It's failing to connect to others Server because of Permission Denied Issue]
 
-4) ansible WebServer -m shell -a "uname -a;df -h" (Disk Space & OS Details)
-5) ansible WebServer -m yum -a "name=httpd state=present" (Apache Installation)
-6) ansible WebServer -m yum -a "name=httpd state=present" -s (After Setting Root Permissions in /etc/sudoers)
-7) ansible WebServer -m service -a "name=httpd state=started" -s (Checking the Status)
+5) ansible WebServer -m shell -a "uname -a;df -h" (Disk Space & OS Details)
+6) ansible WebServer -m yum -a "name=httpd state=present" (Apache Installation)
+7) ansible WebServer -m yum -a "name=httpd state=present" -s (After Setting Root Permissions in /etc/sudoers)
+8) ansible WebServer -m service -a "name=httpd state=started" -s (Checking the Status)
 
 ----------------------------------------------------------------------------------------
 

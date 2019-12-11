@@ -2,7 +2,7 @@ provider "aws" {
 	region="eu-west-2"
 }
 
-resource "aws_instance" "Ansible_Server" {
+resource "aws_instance" "Ansible_Controller" {
 ami = "ami-040ba9174949f6de4"
 instance_type = "t2.small"
 subnet_id = "${aws_subnet.Ansible_Server_SubnetLinux.id}"
@@ -15,7 +15,7 @@ Name = "Ansible_Controller"
 
 }
 
-resource "aws_instance" "Ansible_Server" {
+resource "aws_instance" "Ansible_1" {
 ami = "ami-040ba9174949f6de4"
 instance_type = "t2.small"
 subnet_id = "${aws_subnet.Ansible_Server_SubnetLinux.id}"
@@ -28,7 +28,7 @@ Name = "Ansible_1"
 
 }
 
-resource "aws_instance" "Ansible_Server" {
+resource "aws_instance" "Ansible_2" {
 ami = "ami-040ba9174949f6de4"
 instance_type = "t2.small"
 subnet_id = "${aws_subnet.Ansible_Server_SubnetLinux.id}"

@@ -1,13 +1,13 @@
 # AnsibleQuickStart
-Creation of **3-AWS** EC2 Servers on Terraform(.tf).
+Creation of **3-AWS** EC2 Servers on Terraform(.tf) -> Refer **Instance.tf**
 
 Installation, Creation of Users on Servers, Commands etc.
 
 # INSTALLING ANSIBLE (MASTER):
 
-1) Choose Linux AMI - 3 Instances
-2) Enable ICMP All Traffic and SSH in Security Group - 1 Security Group
-3) Install Ansible on AWSLinux
+1) Choose **Linux AMI - 3 Instances**
+2) Enable **ICMP All Traffic** and **SSH** in Security Group - 1 Security Group
+3) Install Ansible on AWSLinux from the below commands :
 
 # Installation Commands:
 
@@ -21,19 +21,19 @@ Installation, Creation of Users on Servers, Commands etc.
 ----------------------------------------------------------------------------------------
 
 # Creation of Users on Servers:[Must be Same Username for all the servers, for better SSH Connection]
-
+-------------------------------------------------
 1) useradd -d /home/ansadm -m ansadm ***********
 2) passwd ansadm **************  [Not Mandatory]
-
-CONTROLLER: 172.31.XX.XX
+-------------------------------------------------
+**CONTROLLER: 172.31.XX.XX**
 Username : ec2-user
 Pwd : Ansible@79
 
-HOSTS: 172.31.XX.XXX  [WebServer]
+**HOSTS: 172.31.XX.XXX**  [WebServer]
 Username : ec2-user
 Pwd : Ansible@79
 
-172.31.XX.XX [AppServer]
+**172.31.XX.XX [AppServer]**
 Pwd : Ansible@79
 
 3) Public Key Authentication: sudo vi /etc/ssh/sshd_config

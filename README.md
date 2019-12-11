@@ -1,6 +1,7 @@
 # AnsibleQuickStart
-Installation, Creation of Users on Servers, Commands etc.
+Creation of **3-AWS** EC2 Servers on Terraform(.tf).
 
+Installation, Creation of Users on Servers, Commands etc.
 
 # INSTALLING ANSIBLE (MASTER):
 
@@ -13,7 +14,7 @@ Installation, Creation of Users on Servers, Commands etc.
 --- sudo yum update -y
 1) sudo yum-config-manager --enable epel
 2) sudo yum repolist (you should see epel)
-3) sudo yum install ansible
+3) **sudo yum install ansible**
 4) ansible --version (To Verify)
 5) ansible localhost -m ping (To test Ansible and see if it’s working on our Ansible Control server run)
 
@@ -45,7 +46,7 @@ Pwd : Ansible@79
 
 **On Controller --
 
-1) ssh-keygen
+1) **ssh-keygen**
 2) ssh-copy-id -i ec2-user@172.31.XX.XXX
 3) .ssh will be created in Computer-2
 4) .ssh -> authorised_keys (Entry will be there for COMPUTER-1 in auth_keys

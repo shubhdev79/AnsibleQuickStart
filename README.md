@@ -12,13 +12,9 @@ Installation, Creation of Users on Servers, Commands etc.
 
 --- sudo yum update -y
 1) sudo yum-config-manager --enable epel
-
 2) sudo yum repolist (you should see epel)
-
 3) sudo yum install ansible
-
 4) ansible --version (To Verify)
-
 5) ansible localhost -m ping (To test Ansible and see if it’s working on our Ansible Control server run)
 
 ----------------------------------------------------------------------------------------
@@ -57,6 +53,7 @@ Pwd : Ansible@79
 
 **On Slave --
 
+1) Repeat the same on Slave Servers. 
 ----------------------------------------------------------------------------------------
 
 # ANSIBLE COMMANDS:
@@ -73,7 +70,7 @@ Pwd : Ansible@79
 
 ----------------------------------------------------------------------------------------
 
-ANSIBLE PLAYBOOKS & ROLES:
+# ANSIBLE PLAYBOOKS & ROLES:
 Roles - are the next level of abstraction of ansible playbook. Roles are the list of commands that ansible will execute on target machines in given order
 Playbook — decides which role is for which target machine
 

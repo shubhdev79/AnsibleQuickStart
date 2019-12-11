@@ -58,15 +58,15 @@ Pwd : Ansible@79
 
 # ANSIBLE COMMANDS:
 
-1> ansible localhost -m ping
-2> ansible WebServer -m ping
-3> ansible all -m ping
+1) ansible localhost -m ping
+2) ansible WebServer -m ping
+3) ansible all -m ping
 ** ansible all -m ping -k (With Prompting Password)
 
-4> ansible WebServer -m shell -a "uname -a;df -h" (Disk Space & OS Details)
-5> ansible WebServer -m yum -a "name=httpd state=present" (Apache Installation)
-6> ansible WebServer -m yum -a "name=httpd state=present" -s (After Setting Root Permissions in /etc/sudoers)
-7> ansible WebServer -m service -a "name=httpd state=started" -s (Checking the Status)
+4) ansible WebServer -m shell -a "uname -a;df -h" (Disk Space & OS Details)
+5) ansible WebServer -m yum -a "name=httpd state=present" (Apache Installation)
+6) ansible WebServer -m yum -a "name=httpd state=present" -s (After Setting Root Permissions in /etc/sudoers)
+7) ansible WebServer -m service -a "name=httpd state=started" -s (Checking the Status)
 
 ----------------------------------------------------------------------------------------
 

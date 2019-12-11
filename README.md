@@ -25,16 +25,17 @@ Installation, Creation of Users on Servers, Commands etc.
 1) useradd -d /home/ansadm -m ansadm ***********
 2) passwd ansadm **************  [Not Mandatory]
 -------------------------------------------------
-**CONTROLLER: 172.31.XX.XX**
+**CONTROLLER: 172.31.XX.XX** [Master]
 Username : ec2-user
 Pwd : Ansible@79
 
 **HOSTS: 172.31.XX.XXX**  [WebServer]
 Username : ec2-user
-Pwd : Ansible@79
+Pwd : Ans****79
 
 **172.31.XX.XX [AppServer]**
-Pwd : Ansible@79
+Username : ec2-user
+Pwd : Ans****79
 
 3) Public Key Authentication: sudo vi /etc/ssh/sshd_config
 4) Find the Line containing “PasswordAuthentication” parameter and change its value from “no” to “yes“.
@@ -47,22 +48,24 @@ Pwd : Ansible@79
 **On Controller --
 
 1) **ssh-keygen**
-2) ssh-copy-id -i ec2-user@172.31.XX.XXX
-3) .ssh will be created in Computer-2
-4) .ssh -> authorised_keys (Entry will be there for COMPUTER-1 in auth_keys
-5) ssh ansadm@172.31.XX.XXX
+2) ssh-copy-id -i ec2-user@172.31.XX.XXX [It will Copy the Id and Paste in .ssh-> authorised_Keys]
+3) .ssh will be created in **Computer-2 i.e WebServer**
+4) .ssh -> authorised_keys (Entry will be there of **COMPUTER-1** in auth_keys)
+5) ssh ansadm@172.31.XX.XXX (First Time it will ask for Password)
 
 **On Slave --
 
-1) Repeat the same on Slave Servers. 
+1) Repeat the same on Slave Servers to Establish SSH Connection
+
 ----------------------------------------------------------------------------------------
 
 # ANSIBLE COMMANDS:
 
 1) ansible localhost -m ping
-2) ansible WebServer -m ping
+2) ansible **WebServer** -m ping
 3) ansible all -m ping
-** ansible all -m ping -k (With Prompting Password)
+**ansible all -m ping -k (-K is for Password Prompt)** 
+[Useful in Case, It's failing to connect to others Server because of Permission Denied Issue]
 
 4) ansible WebServer -m shell -a "uname -a;df -h" (Disk Space & OS Details)
 5) ansible WebServer -m yum -a "name=httpd state=present" (Apache Installation)
